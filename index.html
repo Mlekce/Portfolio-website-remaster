@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
     <title>Portfolio</title>
 </head>
 
@@ -34,7 +34,7 @@
             </ul>
 
             <button class="header__menu-btn">
-                <img src="src/menu.png" alt="menu" class="header__menu-icon">
+                <img src="./src/assets/icons/menu.png" alt="menu" class="header__menu-icon">
             </button>
         </div>
     </header>
@@ -57,7 +57,7 @@
         <section class="about__content">
             <div class="about__grid">
                 <div class="about__image-container">
-                    <img src="src/picture.png" alt="picture of me" class="about__image">
+                    <img src="./src/assets/images/picture.png" alt="picture of me" class="about__image">
                 </div>
                 <div class="about__info" data-aos="fade-down">
                     <h3 class="about__info-title">Web developer & system administrator</h3>
@@ -84,7 +84,7 @@
         <section class="about__stats">
             <div class="about__card">
                 <figure class="about__card-figure">
-                    <img src="./src/smiley.png" alt="happy smiley" class="about__card-image">
+                    <img src="./src/assets/icons/smiley.png" alt="happy smiley" class="about__card-image">
                 </figure>
                 <h3 class="about__card-number">3</h3>
                 <p class="about__card-text">Happy clients</p>
@@ -92,7 +92,7 @@
 
             <div class="about__card">
                 <figure class="about__card-figure">
-                    <img src="./src/note.png" alt="projects" class="about__card-image">
+                    <img src="./src/assets/icons/note.png" alt="projects" class="about__card-image">
                 </figure>
                 <h3 class="about__card-number">5</h3>
                 <p class="about__card-text">Projects</p>
@@ -100,7 +100,7 @@
 
             <div class="about__card">
                 <figure class="about__card-figure">
-                    <img src="./src/phone.png" alt="support hours" class="about__card-image">
+                    <img src="./src/assets/icons/phone.png" alt="support hours" class="about__card-image">
                 </figure>
                 <h3 class="about__card-number">12000+</h3>
                 <p class="about__card-text">Hours of support</p>
@@ -108,7 +108,7 @@
 
             <div class="about__card">
                 <figure class="about__card-figure">
-                    <img src="./src/calendar.png" alt="experience" class="about__card-image">
+                    <img src="./src/assets/icons/calendar.png" alt="experience" class="about__card-image">
                 </figure>
                 <h3 class="about__card-number">8</h3>
                 <p class="about__card-text">Years of experience</p>
@@ -193,7 +193,7 @@
             <div class="about__technologies-container">
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/250px-Tux.svg.png"
+                        <img src="./src/assets/images/Tux.png"
                             alt="tux image" class="technology-image">
                         <span class="technology-name">Linux</span>
                     </div>
@@ -201,47 +201,47 @@
 
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/250px-Docker_logo.svg.png"
+                        <img src="./src/assets/images/docker.svg"
                             alt="docker image" class="technology-image">
                     </div>
                 </div>
 
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/MongoDB_Fores-Green.svg/250px-MongoDB_Fores-Green.svg.png"
+                        <img src="./src/assets/images/mongo.svg"
                             alt="MongoDB image" class="technology-image">
                     </div>
                 </div>
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/250px-Node.js_logo.svg.png"
+                        <img src="./src/assets/images/nodejsStackedLight.svg"
                             alt="NodeJS img" class="technology-image">
-                        <span class="technology-name"></span>
+                        <span class="technology-name">NodeJS</span>
                     </div>
                 </div>
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/250px-React_Logo_SVG.svg.png"
-                            alt="react" class="technology-image">
+                        <img src="./src/assets/images/react.svg"
+                            alt="React image" class="technology-image">
                         <span class="technology-name">React</span>
                     </div>
                 </div>
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="" alt="" class="technology-image">
-                        <span class="technology-name">Express.js</span>
+                        <img src="./src/assets/images/express.svg" alt="Express.js image" class="technology-image">
+                        <span class="technology-name"></span>
                     </div>
                 </div>
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="" alt="" class="technology-image">
+                        <img src="./src/assets/images/js.png" alt="JavaScript image" class="technology-image">
                         <span class="technology-name">JavaScript</span>
                     </div>
                 </div>
                 <div class="about__technologies-item">
                     <div class="about__technologies-info">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/150px-Python-logo-notext.svg.png"
-                            alt="Python img" class="technology-image">
+                        <img src="./src/assets/images/python.svg"
+                            alt="Python image" class="technology-image">
                         <span class="technology-name">Python</span>
                     </div>
                 </div>
@@ -255,9 +255,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/dropdown.js"></script>
-    <script src="js/progress.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script src="./dist/js/dropdown.js"></script>
+    <script src="./dist/js/progress.js"></script>
 
 </body>
 </html>
