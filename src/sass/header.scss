@@ -1,0 +1,145 @@
+@use "variables";
+
+.header {
+    background-color: variables.$crna;
+}
+
+.header__nav {
+    position: relative;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    color: white;
+    margin: auto;
+    max-width: variables.$max-width;
+}
+
+.header__title {
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.header__description {
+    position: relative;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.header__description::after {
+    content: ">";
+    position: absolute;
+    top: 0%;
+    right: 15px;
+    color: variables.$zelena;
+}
+
+.header__description::before {
+    content: "<\\";
+    position: absolute;
+    top: 0%;
+    left: 15px;
+    color: variables.$zelena;
+}
+
+.header__menu-btn {
+    background-color: variables.$crna;
+    border: 1px solid variables.$zelena;
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header__nav-link {
+    color: white;
+    position: relative;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.header__nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 60%;
+    background-color: variables.$zelena;
+    transition: transform .3s ease-in;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.header__nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header__nav-link-active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header__dropdown {
+    display: none;
+}
+
+@media screen and (max-width:700px) {
+    .header__nav-list {
+        display: none;
+    }
+
+    .header__dropdown.active {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        background-color: variables.$crna;
+        z-index: 99999;
+    }
+
+    .header__dropdown-link {
+        color: white;
+    }
+
+    .header__dropdown-item {
+        padding: 0.5rem;
+    }
+
+    .header__dropdown-item:last-child {
+        border-bottom: 1px solid variables.$siva;
+    }
+
+    .header__dropdown-item:hover {
+        background-color: variables.$zelena;
+    }
+
+    .header__menu-btn {
+        background-color: variables.$crna;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .header__menu-btn:hover,
+    .header__menu-btn:active {
+        background-color: variables.$zelena;
+    }
+
+    .header__menu-btn:hover .header__menu-icon,
+    .header__menu-btn:active .header__menu-icon {
+        filter: brightness(0);
+    }
+}

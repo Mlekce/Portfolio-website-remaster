@@ -1,0 +1,24 @@
+@use "variables";
+.footer {
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer__container {
+    max-width: variables.$max-width;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer__copyright {
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footer__copyright span {
+    color: variables.$zelena;
+    
+}

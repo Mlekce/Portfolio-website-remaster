@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <h4 class="header__title">Srđan Stojanac</h4>
+                <p class="header__description">Web developer</p>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="portfolio.html" class="header__nav-link">Portfolio</a></li>
+                    <li class="header__nav-item"><a href="resume.html"
+                            class="header__nav-link header__nav-link-active">Resume</a></li>
+                    <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <ul class="header__dropdown">
+                <li class="header__dropdown-item"><a href="index.html" class="header__dropdown-link">About</a></li>
+                <li class="header__dropdown-item"><a href="portfolio.html" class="header__dropdown-link">Portfolio</a>
+                </li>
+                <li class="header__dropdown-item"><a href="resume.html" class="header__dropdown-link">Resume</a></li>
+                <li class="header__dropdown-item"><a href="contact.html" class="header__dropdown-link">Contact</a></li>
+            </ul>
+
+            <button class="header__menu-btn">
+                <img src="src/menu.png" alt="menu" class="header__menu-icon">
+            </button>
+        </div>
+    </header>
+
+    <main class="resume">
+        <section class="resume__top" data-aos="fade-down">
+            <h1 class="resume__title">Resume</h1>
+            <p class="resume__description">
+                On this page, you can find information about my education and work
+                experience.
+            </p>
+        </section>
+
+        <nav class="resume__breadcrumb">
+            <p><span class="resume__breadcrumb-item resume__breadcrumb-item--active">Home</span> / Resume</p>
+        </nav>
+
+        <section class="resume__main">
+            <div class="resume__grid" data-aos="fade-down">
+                <div class="resume__item">
+                    <div class="resume__item-container">
+                        <h3 class="resume__heading">Summary</h3>
+                        <div class="resume__item-inner">
+                            <h4 class="resume__item-title">Srđan Stojanac</h4>
+                            <p class="resume__item-text">
+                                I am a system administrator and full-stack web developer with
+                                eight years of experience in the tech field. My areas of
+                                interest include Web development and DevOps. After completing my higher education, I
+                                have been
+                                working in the tech field for the past eight years. During this
+                                time, I have been honing my skills and undergoing training in
+                                certifications such as CCNA, MCSA, and Linux+. Additionally, I have
+                                learned how to program web applications.
+                            </p>
+                        </div>
+
+                        <h3 class="resume__heading">Education</h3>
+                        <div class="resume__item-inner">
+                            <h4 class="resume__item-title">Master of Economics</h4>
+                            <h5 class="resume__item-subtitle">2013 - 2016</h5>
+                            <p><em>Faculty of Economics, University of Kragujevac</em></p>
+                            <p class="resume__item-text">
+                                I studied the module Electronic Business at the University of
+                                Kragujevac, where I earned the academic title of Master of
+                                Economics.
+                            </p>
+                        </div>
+
+                        <div class="resume__item-inner">
+                            <h4 class="resume__item-title">Bachelor of Informational Technology</h4>
+                            <h5 class="resume__item-subtitle">2010 - 2013</h5>
+                            <p><em>VIPOS, Western Serbia Academy of Applied Studies</em></p>
+                            <p class="resume__item-text">
+                                I studied the Electronic Business module at the Western Serbia
+                                Academy of Applied Studies, where I earned the title of Bachelor
+                                of Information Technology.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume__item">
+                    <div class="resume__item-container">
+                        <h3 class="resume__heading">Professional Experience</h3>
+                        <div class="resume__item-inner">
+                            <h4 class="resume__item-title">Freelance web developer</h4>
+                            <h5 class="resume__item-subtitle">2025 - Present</h5>
+                            <p>Freelance</p>
+                            <ul class="resume__list">
+                                <li class="resume__list-item resume__item-text">Design, development, and implementation of the graphic,
+                                    layout, and production communication materials.</li>
+                                <li class="resume__list-item resume__item-text">Deploying web aplications to the cloud and managing server infrastructure.</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume__item-inner">
+                            <h4 class="resume__item-title">System administrator</h4>
+                            <h5 class="resume__item-subtitle">2017 - Present</h5>
+                            <p>Republic Geodethic Authority of Serbia, Belgrade, Serbia</p>
+                            <ul class="resume__list">
+                                <li class="resume__list-item resume__item-text">Administration of Windows and Novell servers.</li>
+                                <li class="resume__list-item resume__item-text">Administration of Windows client machines, printers, user
+                                    shares.</li>
+                                <li class="resume__list-item resume__item-text">Maintenence and patching of systems and programs.</li>
+                                <li class="resume__list-item resume__item-text">Backuping server data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__copyright">
+                <p>Made by <span>Srđan S.</span> &copy; 2025 All rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/dropdown.js"></script>
+</body>
+
+</html>
