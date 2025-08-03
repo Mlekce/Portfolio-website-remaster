@@ -1,6 +1,7 @@
 @use "variables";
 
 // SECTION: Resume Top
+
 .portfolio__top {
   background-color: variables.$crna;
   color: white;
@@ -45,15 +46,16 @@
 }
 
 .portfolio__main {
-    margin: 48px auto;
+    margin: 48px auto ;
     padding: 0 1.5rem;
     max-width: variables.$max-width;
+    min-height: 49vh;
     color: white;
 }
 
 .portfolio__list {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .portfolio__list-item {
@@ -74,14 +76,25 @@
 }
 
 .portfolio__projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .portfolio__project {
     position: relative;
     z-index: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 500px;
+}
+
+.portfolio__project > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
 }
 
 .portfolio__project:hover .portfolio__project-info {
@@ -124,4 +137,18 @@
 
 .portfolio__project-website-link {
     text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio__description {
+    width: 44ch;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .portfolio__description {
+    width: 35ch;
+    font-size: 1rem;
+  }
 }
