@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <h4 class="header__title">Srđan Stojanac</h4>
+          <p class="header__description">Web developer</p>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="index.html" class="header__nav-link">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="portfolio.html"
+                class="header__nav-link header__nav-link-active"
+                >Portfolio</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="resume.html" class="header__nav-link">Resume</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="contact.html" class="header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="header__dropdown">
+          <li class="header__dropdown-item">
+            <a href="index.html" class="header__dropdown-link">About</a>
+          </li>
+          <li class="header__dropdown-item">
+            <a href="portfolio.html" class="header__dropdown-link">Portfolio</a>
+          </li>
+          <li class="header__dropdown-item">
+            <a href="resume.html" class="header__dropdown-link">Resume</a>
+          </li>
+          <li class="header__dropdown-item">
+            <a href="contact.html" class="header__dropdown-link">Contact</a>
+          </li>
+        </ul>
+
+        <button class="header__menu-btn">
+          <img
+            src="./src/assets/icons/menu.png"
+            alt="menu"
+            class="header__menu-icon"
+          />
+        </button>
+      </div>
+    </header>
+
+    <main class="portfolio">
+      <section class="portfolio__top" data-aos="fade-down">
+        <h1 class="portfolio__title">Portfolio</h1>
+        <p class="portfolio__description">
+          On this page you can find information about my personal projects in
+          web development.
+        </p>
+      </section>
+
+      <nav class="portfolio__breadcrumb">
+        <p>
+          <span class="portfolio__breadcrumb--active">Home</span> / Portfolio
+        </p>
+      </nav>
+
+      <section class="portfolio__main">
+        <ul class="portfolio__list">
+          <li
+            class="portfolio__list-item portfolio__list-item--active"
+            data-portfolio-filter="all"
+          >
+            All
+          </li>
+          <li class="portfolio__list-item" data-portfolio-filter="websites">
+            Websites
+          </li>
+          <li class="portfolio__list-item" data-portfolio-filter="applications">
+            Applications
+          </li>
+          <li class="portfolio__list-item" data-portfolio-filter="other">
+            Other
+          </li>
+        </ul>
+        <div class="portfolio__projects">
+          <figure class="portfolio__project" data-category="other">
+            <img src="./src/assets/images/raspbian.jpg" alt="raspberry-pi" />
+            <figcaption class="portfolio__project-info">
+              <h4 class="portfolio__project-title">
+                <span>Other</span>
+              </h4>
+              <div class="portfolio__project-links">
+                <a href="#" class="portfolio__project-link">
+                  <img src="./src/assets/icons/zoom.svg" alt="magnify icon" />
+                </a>
+                <a href="sajt1.html" class="portfolio__project-link">
+                  <img
+                    src="./src/assets/icons/link-solid-full.svg"
+                    alt="details icon"
+                  />
+                </a>
+              </div>
+              <p class="portfolio__project-website-link">coded.in.rs</p>
+            </figcaption>
+          </figure>
+
+          
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__copyright">
+          <p>Made by <span>Srđan S.</span> &copy; 2025 All rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script src="./dist/js/dropdown.js"></script>
+    <script src="./dist/js/filtriranje.js"></script>
+  </body>
+</html>
