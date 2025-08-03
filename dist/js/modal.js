@@ -8,7 +8,6 @@ modals.forEach((modal) => {
     let img = e.target.closest(".modal").getAttribute("data-modal");
     let title = e.target.closest(".modal").getAttribute("data-title");
     let elem = document.createElement("div");
-    elem.classList.add("x");
     elem.innerHTML = `
     <div class="modal__window"> 
       <div class="modal__wrapper">
@@ -30,6 +29,13 @@ modals.forEach((modal) => {
     elem.addEventListener("click", (e) => {
       if (e.target === elem) {
         elem.remove();
+      }
+    });
+
+    document.addEventListener("keydown", function escHandler(e) {
+      if (e.key === "Escape") {
+        elem.remove();
+        document.removeEventListener("keydown", escHandler);
       }
     });
   });
