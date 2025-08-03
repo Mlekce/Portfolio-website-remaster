@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/css/style.css" />
-    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+    <link
+      rel="preload"
+      href="./node_modules/aos/dist/aos.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="./node_modules/aos/dist/aos.css"
+    /></noscript>
     <title>Portfolio</title>
   </head>
   <body>
@@ -70,10 +78,17 @@
         </p>
       </section>
 
-      <nav class="portfolio__breadcrumb">
-        <p>
-          <span class="portfolio__breadcrumb--active">Home</span> / Portfolio
-        </p>
+      <nav class="portfolio__breadcrumb" aria-label="breadcrumb">
+        <ol>
+          <li>
+            <a
+              href="index.html"
+              class="portfolio__breadcrumb-link portfolio__breadcrumb--active"
+              >Home /</a
+            >
+          </li>
+          <li>Portfolio</li>
+        </ol>
       </nav>
 
       <section class="portfolio__main">
@@ -94,49 +109,27 @@
             Other
           </li>
         </ul>
-        <div class="portfolio__projects">
+
+        <div class="portfolio__projects" data-aos="fade-up">
+
           <figure class="portfolio__project" data-category="other">
-            <img src="./src/assets/images/raspbian.jpg" alt="raspberry-pi" />
+            <img src="./src/assets/images/raspbian.jpg" alt="raspberry-pi"/>
             <figcaption class="portfolio__project-info">
-              <h4 class="portfolio__project-title">
-                <span>Other</span>
-              </h4>
+              <h4 class="portfolio__project-title"><span>Other</span></h4>
               <div class="portfolio__project-links">
-                <a href="#" class="portfolio__project-link">
-                  <img src="./src/assets/icons/zoom.svg" alt="magnify icon" />
-                </a>
+                <div class="portfolio__project-link modal" data-modal="./src/assets/images/raspbian.jpg" data-title="Raspberry Pi server image" >
+                  <img src="./src/assets/icons/zoom.svg" alt="Open modal icon"/>
+                </div>
                 <a href="sajt1.html" class="portfolio__project-link">
-                  <img
-                    src="./src/assets/icons/link-solid-full.svg"
-                    alt="details icon"
-                  />
+                  <img src="./src/assets/icons/link-solid-full.svg" alt="details icon"/>
                 </a>
               </div>
               <p class="portfolio__project-website-link">coded.in.rs</p>
             </figcaption>
           </figure>
-          <figure class="portfolio__project" data-category="other">
-            <img src="./src/assets/images/raspbian.jpg" alt="raspberry-pi" />
-            <figcaption class="portfolio__project-info">
-              <h4 class="portfolio__project-title">
-                <span>Other</span>
-              </h4>
-              <div class="portfolio__project-links">
-                <a href="#" class="portfolio__project-link">
-                  <img src="./src/assets/icons/zoom.svg" alt="magnify icon" />
-                </a>
-                <a href="sajt1.html" class="portfolio__project-link">
-                  <img
-                    src="./src/assets/icons/link-solid-full.svg"
-                    alt="details icon"
-                  />
-                </a>
-              </div>
-              <p class="portfolio__project-website-link">coded.in.rs</p>
-            </figcaption>
-          </figure>
-          
+
         </div>
+
       </section>
     </main>
 
@@ -150,5 +143,6 @@
     <script src="./node_modules/aos/dist/aos.js"></script>
     <script src="./dist/js/dropdown.js"></script>
     <script src="./dist/js/filtriranje.js"></script>
+    <script src="./dist/js/modal.js"></script>
   </body>
 </html>

@@ -34,11 +34,19 @@
   color: white;
 }
 
-.portfolio__breadcrumb p {
+.portfolio__breadcrumb ol {
   display: block;
   margin: auto;
   max-width: variables.$max-width;
   padding: 1rem 1.5rem;
+}
+
+.portfolio__breadcrumb li {
+  display: inline-block;
+}
+
+.portfolio__breadcrumb-link {
+  color: white;
 }
 
 .portfolio__breadcrumb--active {
@@ -151,4 +159,44 @@
     width: 35ch;
     font-size: 1rem;
   }
+}
+
+.modal__window {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__wrapper {
+  position: relative;
+  color: white;
+}
+
+.modal__title {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.modal__img {
+  display: block;
+}
+
+.modal__close {
+  color: variables.$zelena;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  border: none;
+  font-size: 1rem;
+  transform: scale(2);
+  background-color: variables.$crna;
+  cursor: pointer;
 }
