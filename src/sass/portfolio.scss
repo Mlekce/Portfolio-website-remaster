@@ -96,19 +96,24 @@
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 500px;
+    overflow: hidden;
 }
 
 .portfolio__project > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
+    transition: transform .3s linear;
 }
 
 .portfolio__project:hover .portfolio__project-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.portfolio__project:hover > img {
+  transform: scale(1.1);
 }
 
 .portfolio__project-info {

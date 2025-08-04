@@ -1019,18 +1019,24 @@ progress::-moz-progress-bar {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: 500px;
+  overflow: hidden;
 }
 
 .portfolio__project > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.3s linear;
 }
 
 .portfolio__project:hover .portfolio__project-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.portfolio__project:hover > img {
+  transform: scale(1.1);
 }
 
 .portfolio__project-info {
@@ -1119,6 +1125,224 @@ progress::-moz-progress-bar {
   transform: scale(2);
   background-color: #000;
   cursor: pointer;
+}
+
+.portfolio__details__top {
+  background-color: #000;
+  color: white;
+  padding: 3rem 0;
+  animation-name: fader;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.portfolio__details__title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.portfolio__details__description {
+  text-align: center;
+  width: 60ch;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.portfolio__details__top + .portfolio__details__breadcrumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  color: white;
+}
+
+.portfolio__details__breadcrumb ol {
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+  padding: 1rem 1.5rem;
+}
+
+.portfolio__details__breadcrumb li {
+  display: inline-block;
+}
+
+.portfolio__details__breadcrumb-link {
+  color: white;
+}
+
+.portfolio__details__breadcrumb--active {
+  color: #18d26e;
+}
+
+.project__container {
+  margin: 48px auto;
+  padding: 0 1.5rem;
+  max-width: 1100px;
+  min-height: 49vh;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project__info {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  margin: 1rem;
+  line-height: 1.5;
+}
+
+.project__info + div {
+  padding: 1rem;
+  margin: 1rem;
+  line-height: 1.5;
+}
+
+.project__info-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.project__info-item {
+  margin: 0.5rem 0;
+}
+
+.project__description {
+  color: white;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  text-indent: 1rem;
+  text-align: justify;
+}
+
+.project__description strong {
+  color: #18d26e;
+}
+
+.project__description-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.project__carousel {
+  padding-top: 1.05rem;
+}
+
+/* Dodatak */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #18d26e;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 980px) {
+  .project__container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .portfolio__details__description {
+    width: 44ch;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .portfolio__details__description {
+    width: 35ch;
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
