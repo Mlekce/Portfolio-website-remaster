@@ -84,18 +84,14 @@
 }
 
 .portfolio__projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
 .portfolio__project {
     position: relative;
     z-index: 1;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 500px;
     overflow: hidden;
 }
 
@@ -152,11 +148,26 @@
     text-align: center;
 }
 
+@media screen and (max-width: 1000px) {
+  .portfolio__projects {
+    display: grid;
+    grid-template-columns: 500px;
+    justify-content: center;
+    gap: 1rem;
+}
+}
+
 @media screen and (max-width: 600px) {
   .portfolio__description {
     width: 44ch;
     font-size: 1rem;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio__projects {
+    grid-template-columns: 1fr;
+}
 }
 
 @media screen and (max-width: 380px) {
