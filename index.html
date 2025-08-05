@@ -1,263 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/css/style.css" />
-    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
     <title>Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="header__container">
-            <div class="header__logo">
-                <h4 class="header__title">Srđan Stojanac</h4>
-                <p class="header__description">Web developer</p>
-            </div>
-
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="index.html" class="header__nav-link header__nav-link-active">About</a></li>
-                    <li class="header__nav-item"><a href="portfolio.html" class="header__nav-link">Portfolio</a></li>
-                    <li class="header__nav-item"><a href="resume.html" class="header__nav-link">Resume</a></li>
-                    <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <ul class="header__dropdown">
-                <li class="header__dropdown-item"><a href="index.html" class="header__dropdown-link">About</a></li>
-                <li class="header__dropdown-item"><a href="portfolio.html" class="header__dropdown-link">Portfolio</a></li>
-                <li class="header__dropdown-item"><a href="resume.html" class="header__dropdown-link">Resume</a></li>
-                <li class="header__dropdown-item"><a href="contact.html" class="header__dropdown-link">Contact</a></li>
-            </ul>
-
-            <button class="header__menu-btn">
-                <img src="./src/assets/icons/menu.png" alt="menu" class="header__menu-icon">
-            </button>
+      <div class="header__container">
+        <div class="header__logo">
+          <h4 class="header__title">Srđan Stojanac</h4>
+          <p class="header__description">Web developer</p>
         </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                href="index.html"
+                class="header__nav-link header__nav-link-active"
+                >About</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="portfolio.html" class="header__nav-link">Portfolio</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="resume.html" class="header__nav-link">Resume</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="contact.html" class="header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="header__dropdown">
+          <li class="header__dropdown-item">
+            <a href="index.html" class="header__dropdown-link">About</a>
+          </li>
+          <li class="header__dropdown-item">
+            <a href="portfolio.html" class="header__dropdown-link">Portfolio</a>
+          </li>
+          <li class="header__dropdown-item">
+            <a href="resume.html" class="header__dropdown-link">Resume</a>
+          </li>
+          <li class="header__dropdown-item">
+            <a href="contact.html" class="header__dropdown-link">Contact</a>
+          </li>
+        </ul>
+
+        <button class="header__menu-btn">
+          <img
+            src="./src/assets/icons/menu.png"
+            alt="menu"
+            class="header__menu-icon"
+          />
+        </button>
+      </div>
     </header>
 
     <main class="about">
-        <section class="about__top" data-aos="fade-down">
-            <h1 class="about__title">About me</h1>
-            <p class="about__description">
-                Hello visitor, my name is Srđan, and I am a professional full stack web developer and system
-                administrator from Serbia. I specialize in developing websites and web applications using the M.E.R.N
-                stack
-                (MongoDB/MySQL, Express, React, Node).
+      <section class="about__top" data-aos="fade">
+        <h1 class="about__title">About me</h1>
+        <p class="about__description">
+          Hello visitor, my name is Srđan, and I am a professional full stack
+          web developer and system administrator from Serbia. I specialize in
+          developing websites and web applications using the M.E.R.N stack
+          (MongoDB/MySQL, Express, React, Node).
+        </p>
+      </section>
+
+      <nav class="about__breadcrumb">
+        <p><span class="about__breadcrumb--active">Home</span> / About</p>
+      </nav>
+
+      <section class="about__content">
+        <div class="about__grid">
+          <div class="about__image-container">
+            <img
+              src="./src/assets/images/picture.png"
+              alt="picture of me"
+              class="about__image"
+            />
+          </div>
+          <div class="about__info" data-aos="fade-down">
+            <h3 class="about__info-title">
+              Web developer & system administrator
+            </h3>
+            <p class="about__info-subtitle">
+              Here is some information about me:
             </p>
-        </section>
+            <ul class="about__info-list">
+              <li class="about__info-item">
+                <b>Birthday:</b> <span>31 December 1991</span>
+              </li>
+              <li class="about__info-item"><b>Age:</b> <span>34</span></li>
+              <li class="about__info-item">
+                <b>State:</b> <span>Serbia</span>
+              </li>
+              <li class="about__info-item">
+                <b>City:</b> <span>Valjevo</span>
+              </li>
+              <li class="about__info-item">
+                <b>Website:</b>
+                <span
+                  ><a href="https://stojanacsrdjan.com"
+                    >https://stojanacsrdjan.com</a
+                  ></span
+                >
+              </li>
+              <li class="about__info-item">
+                <b>Degree:</b> <span>Master</span>
+              </li>
+              <li class="about__info-item">
+                <b>Email:</b> <span>coded_rs@yahoo.com</span>
+              </li>
+              <li class="about__info-item">
+                <b>Freelance:</b> <span>Available</span>
+              </li>
+            </ul>
+            <p class="about__info-paragraph">
+              Besides Linux and web development, I am highly skilled in managing
+              servers and client computers in Windows domain environments, with
+              eight years of experience in this domain.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <nav class="about__breadcrumb">
-            <p><span class="about__breadcrumb--active">Home</span> / About</p>
-        </nav>
+      <section class="about__stats">
+        <div class="about__card">
+          <figure class="about__card-figure">
+            <img
+              src="./src/assets/icons/smiley.png"
+              alt="happy smiley"
+              class="about__card-image"
+            />
+          </figure>
+          <h3
+            class="about__card-number purecounter"
+            data-purecounter-start="0"
+            data-purecounter-end="3"
+            data-purecounter-duration=".2"
+          >
+            3
+          </h3>
+          <p class="about__card-text">Happy clients</p>
+        </div>
 
-        <section class="about__content">
-            <div class="about__grid">
-                <div class="about__image-container">
-                    <img src="./src/assets/images/picture.png" alt="picture of me" class="about__image">
-                </div>
-                <div class="about__info" data-aos="fade-down">
-                    <h3 class="about__info-title">Web developer & system administrator</h3>
-                    <p class="about__info-subtitle">Here is some information about me:</p>
-                    <ul class="about__info-list">
-                        <li class="about__info-item"><b>Birthday:</b> <span>31 December 1991</span></li>
-                        <li class="about__info-item"><b>Age:</b> <span>34</span></li>
-                        <li class="about__info-item"><b>State:</b> <span>Serbia</span></li>
-                        <li class="about__info-item"><b>City:</b> <span>Valjevo</span></li>
-                        <li class="about__info-item"><b>Website:</b> <span><a
-                                    href="https://stojanacsrdjan.com">https://stojanacsrdjan.com</a></span></li>
-                        <li class="about__info-item"><b>Degree:</b> <span>Master</span></li>
-                        <li class="about__info-item"><b>Email:</b> <span>coded_rs@yahoo.com</span></li>
-                        <li class="about__info-item"><b>Freelance:</b> <span>Available</span></li>
-                    </ul>
-                    <p class="about__info-paragraph">
-                        Besides Linux and web development, I am highly skilled in managing servers and client computers
-                        in Windows domain environments, with eight years of experience in this domain.
-                    </p>
-                </div>
+        <div class="about__card">
+          <figure class="about__card-figure">
+            <img
+              src="./src/assets/icons/note.png"
+              alt="projects"
+              class="about__card-image"
+            />
+          </figure>
+          <h3
+            class="about__card-number purecounter"
+            data-purecounter-start="0"
+            data-purecounter-end="5"
+            data-purecounter-duration=".2"
+          >
+            5
+          </h3>
+          <p class="about__card-text">Projects</p>
+        </div>
+
+        <div class="about__card">
+          <figure class="about__card-figure">
+            <img
+              src="./src/assets/icons/phone.png"
+              alt="support hours"
+              class="about__card-image"
+            />
+          </figure>
+          <h3
+            class="about__card-number purecounter"
+            data-purecounter-start="0"
+            data-purecounter-end="12000"
+            data-purecounter-duration=".5"
+          >
+            12000
+          </h3>
+          <p class="about__card-text">Hours of support</p>
+        </div>
+
+        <div class="about__card">
+          <figure class="about__card-figure">
+            <img
+              src="./src/assets/icons/calendar.png"
+              alt="experience"
+              class="about__card-image"
+            />
+          </figure>
+          <h3
+            class="about__card-number purecounter"
+            data-purecounter-start="0"
+            data-purecounter-end="8"
+            data-purecounter-duration="1"
+          >
+            8
+          </h3>
+          <p class="about__card-text">Years of experience</p>
+        </div>
+      </section>
+
+      <section class="about__skills">
+        <p class="about__skills-description">Skills</p>
+        <h3 class="about__skills-title">My Skills</h3>
+        <div class="about__skills-container">
+          <div class="about__skills-skill">
+            <div class="about__skills-info">
+              <span class="skill-name">HTML</span>
+              <span class="skill-value">100%</span>
             </div>
-        </section>
-
-        <section class="about__stats">
-            <div class="about__card">
-                <figure class="about__card-figure">
-                    <img src="./src/assets/icons/smiley.png" alt="happy smiley" class="about__card-image">
-                </figure>
-                <h3 class="about__card-number">3</h3>
-                <p class="about__card-text">Happy clients</p>
+            <div class="about__skills-bar">
+              <progress
+                class="progress"
+                value="0"
+                max="100"
+                aria-label="HTML skill level 100 percent"
+                id="html"
+              >
+                100%
+              </progress>
             </div>
+          </div>
 
-            <div class="about__card">
-                <figure class="about__card-figure">
-                    <img src="./src/assets/icons/note.png" alt="projects" class="about__card-image">
-                </figure>
-                <h3 class="about__card-number">5</h3>
-                <p class="about__card-text">Projects</p>
+          <div class="about__skills-skill">
+            <div class="about__skills-info">
+              <span class="skill-name">JAVASCRIPT</span>
+              <span class="skill-value">95%</span>
             </div>
-
-            <div class="about__card">
-                <figure class="about__card-figure">
-                    <img src="./src/assets/icons/phone.png" alt="support hours" class="about__card-image">
-                </figure>
-                <h3 class="about__card-number">12000+</h3>
-                <p class="about__card-text">Hours of support</p>
+            <div class="about__skills-bar">
+              <progress
+                class="progress"
+                value="0"
+                max="100"
+                aria-label="JAVASCRIPT skill level 95 percent"
+                id="javascript"
+              >
+                95%
+              </progress>
             </div>
+          </div>
 
-            <div class="about__card">
-                <figure class="about__card-figure">
-                    <img src="./src/assets/icons/calendar.png" alt="experience" class="about__card-image">
-                </figure>
-                <h3 class="about__card-number">8</h3>
-                <p class="about__card-text">Years of experience</p>
+          <div class="about__skills-skill">
+            <div class="about__skills-info">
+              <span class="skill-name">CSS</span>
+              <span class="skill-value">90%</span>
             </div>
-        </section>
-
-        <section class="about__skills">
-            <p class="about__skills-description">Skills</p>
-            <h3 class="about__skills-title">My Skills</h3>
-            <div class="about__skills-container">
-                <div class="about__skills-skill">
-                    <div class="about__skills-info">
-                        <span class="skill-name">HTML</span>
-                        <span class="skill-value">100%</span>
-                    </div>
-                    <div class="about__skills-bar">
-                        <progress class="progress" value="0" max="100"
-                            aria-label="HTML skill level 100 percent" id="html">100%</progress>
-                    </div>
-                </div>
-
-                <div class="about__skills-skill">
-                    <div class="about__skills-info">
-                        <span class="skill-name">JAVASCRIPT</span>
-                        <span class="skill-value">95%</span>
-                    </div>
-                    <div class="about__skills-bar">
-                        <progress class="progress" value="0" max="100"
-                            aria-label="JAVASCRIPT skill level 95 percent" id="javascript">95%</progress>
-                    </div>
-                </div>
-
-                <div class="about__skills-skill">
-                    <div class="about__skills-info">
-                        <span class="skill-name">CSS</span>
-                        <span class="skill-value">90%</span>
-                    </div>
-                    <div class="about__skills-bar">
-                        <progress class="progress" value="0" max="100"
-                            aria-label="CSS skill level 90 percent" id="css">90%</progress>
-                    </div>
-                </div>
-
-                <div class="about__skills-skill">
-                    <div class="about__skills-info">
-                        <span class="skill-name">EXPRESS</span>
-                        <span class="skill-value">90%</span>
-                    </div>
-                    <div class="about__skills-bar">
-                        <progress class="progress" value="0" max="100"
-                            aria-label="EXPRESS skill level 90 percent" id="express">90%</progress>
-                    </div>
-                </div>
-
-                <div class="about__skills-skill">
-                    <div class="about__skills-info">
-                        <span class="skill-name">REACT</span>
-                        <span class="skill-value">60%</span>
-                    </div>
-                    <div class="about__skills-bar">
-                        <progress class="progress" value="0" max="100"
-                            aria-label="REACT skill level 60 percent" id="react">60%</progress>
-                    </div>
-                </div>
-
-                <div class="about__skills-skill">
-                    <div class="about__skills-info">
-                        <span class="skill-name">LINUX</span>
-                        <span class="skill-value">55%</span>
-                    </div>
-                    <div class="about__skills-bar">
-                        <progress class="progress" value="0" max="100"
-                            aria-label="LINUX skill level 55 percent" id="linux">55%</progress>
-                    </div>
-                </div>
+            <div class="about__skills-bar">
+              <progress
+                class="progress"
+                value="0"
+                max="100"
+                aria-label="CSS skill level 90 percent"
+                id="css"
+              >
+                90%
+              </progress>
             </div>
-        </section>
+          </div>
 
-        <section class="about__technologies">
-            <p class="about__technologies-description">Technologies</p>
-            <h3 class="about__technologies-title">I'm using</h3>
-            <div class="about__technologies-container">
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/Tux.png"
-                            alt="tux image" class="technology-image">
-                        <span class="technology-name">Linux</span>
-                    </div>
-                </div>
-
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/docker.svg"
-                            alt="docker image" class="technology-image">
-                    </div>
-                </div>
-
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/mongo.svg"
-                            alt="MongoDB image" class="technology-image">
-                    </div>
-                </div>
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/nodejsStackedLight.svg"
-                            alt="NodeJS img" class="technology-image">
-                        <span class="technology-name">NodeJS</span>
-                    </div>
-                </div>
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/react.svg"
-                            alt="React image" class="technology-image">
-                        <span class="technology-name">React</span>
-                    </div>
-                </div>
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/express.svg" alt="Express.js image" class="technology-image">
-                        <span class="technology-name"></span>
-                    </div>
-                </div>
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/js.png" alt="JavaScript image" class="technology-image">
-                        <span class="technology-name">JavaScript</span>
-                    </div>
-                </div>
-                <div class="about__technologies-item">
-                    <div class="about__technologies-info">
-                        <img src="./src/assets/images/python.svg"
-                            alt="Python image" class="technology-image">
-                        <span class="technology-name">Python</span>
-                    </div>
-                </div>
+          <div class="about__skills-skill">
+            <div class="about__skills-info">
+              <span class="skill-name">EXPRESS</span>
+              <span class="skill-value">90%</span>
             </div>
-        </section>
+            <div class="about__skills-bar">
+              <progress
+                class="progress"
+                value="0"
+                max="100"
+                aria-label="EXPRESS skill level 90 percent"
+                id="express"
+              >
+                90%
+              </progress>
+            </div>
+          </div>
+
+          <div class="about__skills-skill">
+            <div class="about__skills-info">
+              <span class="skill-name">REACT</span>
+              <span class="skill-value">60%</span>
+            </div>
+            <div class="about__skills-bar">
+              <progress
+                class="progress"
+                value="0"
+                max="100"
+                aria-label="REACT skill level 60 percent"
+                id="react"
+              >
+                60%
+              </progress>
+            </div>
+          </div>
+
+          <div class="about__skills-skill">
+            <div class="about__skills-info">
+              <span class="skill-name">LINUX</span>
+              <span class="skill-value">55%</span>
+            </div>
+            <div class="about__skills-bar">
+              <progress
+                class="progress"
+                value="0"
+                max="100"
+                aria-label="LINUX skill level 55 percent"
+                id="linux"
+              >
+                55%
+              </progress>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__technologies">
+        <p class="about__technologies-description">Technologies</p>
+        <h3 class="about__technologies-title">I'm using</h3>
+        <div class="about__technologies-container">
+          <div class="about__technologies-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/Tux.png"
+                alt="tux image"
+                class="technology-image"
+              />
+              <span class="technology-name">Linux</span>
+            </div>
+          </div>
+
+          <div class="about__technologies-item"  data-aos="fade-up" data-aos-delay="200">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/docker.svg"
+                alt="docker image"
+                class="technology-image"
+              />
+            </div>
+          </div>
+
+          <div class="about__technologies-item"  data-aos="fade-up" data-aos-delay="300">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/mongo.svg"
+                alt="MongoDB image"
+                class="technology-image"
+              />
+            </div>
+          </div>
+          <div class="about__technologies-item"  data-aos="fade-up" data-aos-delay="400">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/nodejsStackedLight.svg"
+                alt="NodeJS img"
+                class="technology-image"
+              />
+              <span class="technology-name">NodeJS</span>
+            </div>
+          </div>
+          <div class="about__technologies-item"  data-aos="fade-up" data-aos-delay="500">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/react.svg"
+                alt="React image"
+                class="technology-image"
+              />
+              <span class="technology-name">React</span>
+            </div>
+          </div>
+          <div class="about__technologies-item"  data-aos="fade-up" data-aos-delay="600">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/express.svg"
+                alt="Express.js image"
+                class="technology-image"
+              />
+              <span class="technology-name"></span>
+            </div>
+          </div>
+          <div class="about__technologies-item"  data-aos="fade-up" data-aos-delay="700">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/js.png"
+                alt="JavaScript image"
+                class="technology-image"
+              />
+              <span class="technology-name">JavaScript</span>
+            </div>
+          </div>
+          <div class="about__technologies-item"  data-aos="fade-up" data-aos-delay="800">
+            <div class="about__technologies-info">
+              <img
+                src="./src/assets/images/python.svg"
+                alt="Python image"
+                class="technology-image"
+              />
+              <span class="technology-name">Python</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__copyright">
-                <p>Made by <span>Srđan S.</span> &copy; 2025 All rights Reserved</p>
-            </div>
+      <div class="footer__container">
+        <div class="footer__copyright">
+          <p>Made by <span>Srđan S.</span> &copy; 2025 All rights Reserved</p>
         </div>
+      </div>
     </footer>
     <script src="./node_modules/aos/dist/aos.js"></script>
     <script src="./dist/js/dropdown.js"></script>
     <script src="./dist/js/progress.js"></script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        new PureCounter();
+      });
+    </script>
+  </body>
 </html>

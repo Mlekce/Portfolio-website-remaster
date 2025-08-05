@@ -1,17 +1,27 @@
-function loadProgress(id, targetValue) {
-    let progress = document.getElementById(id);
-    let currentValue = 0;
+function loadProgress(id, targetValue, duration = 3000) {
+    const progress = document.getElementById(id);
+    const startTime = performance.now();
+    const startValue = 0;
 
-    const interval = setInterval(function () {
-        if (currentValue >= targetValue) {
-            clearInterval(interval);
+    function animate(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progressRatio = Math.min(elapsed / duration, 1); // clamp to 1
+
+        const easedValue = Math.round(startValue + (targetValue - startValue) * easeOutCubic(progressRatio));
+        progress.value = easedValue;
+
+        if (progressRatio < 1) {
+            requestAnimationFrame(animate);
         }
-        else {
-            currentValue++;
-            progress.value = currentValue;
-        }
-    }, 40)
+    }
+
+    requestAnimationFrame(animate);
 }
+
+function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+}
+
 
 function onScrollHalfPage() {
     const scrollTop = window.scrollY || window.pageYOffset;
