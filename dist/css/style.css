@@ -909,6 +909,7 @@ progress::-moz-progress-bar {
 @media screen and (max-width: 830px) {
   .contact__form-field--split {
     flex-direction: column;
+    gap: 0;
   }
 }
 @media screen and (max-width: 600px) {
