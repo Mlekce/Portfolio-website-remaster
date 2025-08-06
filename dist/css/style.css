@@ -1246,6 +1246,11 @@ progress::-moz-progress-bar {
   padding-top: 1.05rem;
 }
 
+.project__github__link {
+  color: #18d26e;
+  text-decoration: underline;
+}
+
 /* Dodatak */
 .slideshow-container {
   max-width: 1000px;
